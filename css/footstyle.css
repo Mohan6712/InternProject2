@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root{
+  --orange:rgb(255, 106, 0);
+  --white:white;
+  --l-white:#d9d9d9;
+  --l-black:rgb(108, 108, 108);
+  --black:black;
+}
+.btn1 a {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 999;
+  font-size: 40px;
+}
+footer{
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  bottom: 0px;
+  width: 100%;
+  background:var(--l-black);
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  color: var(--black);
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: var(--white);
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 22%;
+  background: var(--orange);
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: var(--white);
+}
+.left .content .social a span:hover{
+  background: transparent;
+  color: var(--orange);
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: transparent;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  color: var(--orange);
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: var(--l-black);
+}
+.right form .msg{
+
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  height: 20vh;
+  font-size: 1.0625rem;
+  background:var(--white);
+  padding: 10px 0 0 10px;
+  border-radius: 10px;
+  border: none;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline: none;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  color: var(--white);
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: var(--orange);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.right form .btn button:hover{
+  background: var(--white);
+  color: var(--black);
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: var(--black);
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color:var(--white);
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
