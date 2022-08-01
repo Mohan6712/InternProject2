@@ -1,4 +1,3 @@
-<?php?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -49,14 +48,14 @@
         <div class="right box">
           <h2>Contact us</h2>
           <div class="content">
-            <form action="#">
+            <form method="POST"  action="<?php echo SITEURL;?>feedback.php" >
               <div class="email">
                 <div class="text">Email *</div>
-                <input type="email" required placeholder="Email *">
+                <input type="email" name="email" required placeholder="Email *">
               </div>
               <div class="msg">
                 <div class="text">Message *</div>
-                <textarea rows="2" cols="25" required placeholder="Feedback *"></textarea>
+                <textarea rows="2" name="message" cols="25" required placeholder="Feedback *"></textarea>
               </div>
               <div class="btn">
                 <button type="submit">Send</button>
