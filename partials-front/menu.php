@@ -20,7 +20,10 @@
             <div class="logo">
                 <a href="index.php" title="Logo">
                 <img src="images/logo.png" alt="RestaurantLogo" class="img-responsive">
-                 <h2>Kantipur Restaurant</h2>        
+                
+                </a>
+                <a href="">
+                <h2>Kantipur Restaurant</h2>        
                 </a>
 
             </div>
