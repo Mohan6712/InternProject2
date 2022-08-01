@@ -4,7 +4,7 @@
 
 
     //Create Constants to Store Non Repeating Values
-    define('SITEURL', 'http://localhost/sumit/');
+    define('SITEURL', 'http://localhost/'.$_SERVER['REQUEST_URI']);
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
