@@ -1,10 +1,11 @@
 <?php 
     //Start Session
     session_start();
-
+    $uri = dirname($_SERVER["SCRIPT_FILENAME"]);
+    $basePath= explode('/',$uri)[count(explode('/',$uri))-1].'/';
 
     //Create Constants to Store Non Repeating Values
-    define('SITEURL', 'http://localhost/'.$_SERVER['REQUEST_URI']);
+    define('SITEURL', 'http://localhost/'.$basePath);
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
