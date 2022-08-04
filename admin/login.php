@@ -1,5 +1,4 @@
 <?php include('../config/constants.php'); ?>
-
 <html>
     <head>
         <title>Login - Food Order System</title>
@@ -72,14 +71,14 @@
             $_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
 
             //REdirect to HOme Page/Dashboard
-            header('location:'.SITEURL.'admin/');
+            header('location:'.ADMIN_URI.'admin/');
         }
         else
         {
             //User not Available and Login FAil
             $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
             //REdirect to HOme Page/Dashboard
-            header('location:'.SITEURL.'admin/login.php');
+            header('location:'.ADMIN_URI.'admin/');
         }
 
 
