@@ -53,7 +53,7 @@
         <br><br>
 
                 <!-- Button to Add Admin -->
-                <a href="<?php echo SITEURL; ?>admin/add-category.php" class="btn-primary">Add Category</a>
+                <a href="<?php echo ADMIN_URI; ?>admin/add-category.php" class="btn-primary">Add Category</a>
 
                 <br /><br /><br />
 
@@ -109,7 +109,7 @@
                                                     //Display the Image
                                                     ?>
                                                     
-                                                    <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" width="100px" >
+                                                    <img src="<?php echo ADMIN_URI; ?>images/category/<?php echo $image_name; ?>" style="width:100px" >
                                                     
                                                     <?php
                                                 }
@@ -125,8 +125,8 @@
                                         <td><?php echo $featured; ?></td>
                                         <td><?php echo $active; ?></td>
                                         <td>
-                                            <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
-                                            <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Category</a>
+                                            <a href="<?php echo ADMIN_URI; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
+                                            <a href="<?php echo ADMIN_URI; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Category</a>
                                         </td>
                                     </tr>
 

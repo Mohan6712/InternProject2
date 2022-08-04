@@ -30,7 +30,7 @@
                 //Failed to Remove image
                 $_SESSION['upload'] = "<div class='error'>Failed to Remove Image File.</div>";
                 //REdirect to Manage Food
-                header('location:'.SITEURL.'admin/manage-food.php');
+                header('location:'.ADMIN_URI.'admin/manage-food.php');
                 //Stop the Process of Deleting Food
                 die();
             }
@@ -47,14 +47,14 @@
         if($res==true)
         {
             //Food Deleted
-            $_SESSION['delete'] = "<div class='success'>Food Deleted Successfully.</div>";\
-            header('location:'.SITEURL.'admin/manage-food.php');
+            $_SESSION['delete'] = "<div class='success'>Food Deleted Successfully.</div>";
+            header('location:'.ADMIN_URI.'admin/manage-food.php');
         }
         else
         {
             //Failed to Delete Food
-            $_SESSION['delete'] = "<div class='error'>Failed to Delete Food.</div>";\
-            header('location:'.SITEURL.'admin/manage-food.php');
+            $_SESSION['delete'] = "<div class='error'>Failed to Delete Food.</div>";
+            header('location:'.ADMIN_URI.'admin/manage-food.php');
         }
 
         
@@ -65,7 +65,7 @@
         //Redirect to Manage Food Page
         //echo "REdirect";
         $_SESSION['unauthorize'] = "<div class='error'>Unauthorized Access.</div>";
-        header('location:'.SITEURL.'admin/manage-food.php');
+        header('location:'.ADMIN_URI.'admin/manage-food.php');
     }
 
 ?>

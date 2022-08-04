@@ -5,7 +5,6 @@
 
 ?>
 
-
 <html>
     <head>
         <title>Online Food Order</title>
@@ -33,7 +32,34 @@
             <span class="material-icons-sharp">grid_view</span>
             <h3>Dashboard</h3>
           </a>
-          <a href="#">
+
+          <a href="manage-category.php">
+            <span class="material-icons-sharp">person</span>
+            <h3>Category</h3>
+          </a>
+
+          <a href="manage-food.php">
+            <span class="material-icons-sharp">person</span>
+            <h3>Food Items</h3>
+          </a>
+          <a href="manage-order.php">
+            <span class="material-icons-sharp">person</span>
+            <h3>Order Section</h3>
+          </a>
+          <a href="manage-admin.php">
+            <span class="material-icons-sharp">person</span>
+            <h3>Manage Admin</h3>
+          </a>
+          <a href="logout.php">
+            <span class="material-icons-sharp">logout</span>
+            <h3>Log out</h3>
+          </a>
+        </div>
+      </aside>
+        <!-- Menu Section Ends -->
+
+
+        <!-- <a href="#">
             <span class="material-icons-sharp">person</span>
             <h3>Customers</h3>
           </a>
@@ -65,11 +91,4 @@
           <a href="#">
             <span class="material-icons-sharp">add</span>
             <h3>Add Product</h3>
-          </a>
-          <a href="#">
-            <span class="material-icons-sharp">logout</span>
-            <h3>Log out</h3>
-          </a>
-        </div>
-      </aside>
-        <!-- Menu Section Ends -->
+          </a> -->
