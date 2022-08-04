@@ -194,32 +194,32 @@
                     
                     <div class="active">
                         <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Lorem P. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <h2>Sudarshan Rai</h2>
+                        <p>Awesome Food. Food from some of the finest restaurants in Nepal!</p>                    
                     </div>
 
                     <div>
                         <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Mr. Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <h2>Susant Khadka</h2>
+                        <p>Good Recipes, Nice staff and customer care. A good and quick service. I would be regular customer.</p>                    
                     </div>
 
                     <div>
                         <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <h2>Meena Shrestha</h2>
+                        <p>Excellent Food & in-time delivery of food.</p>                    
                     </div>
 
                     <div>
                         <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Lorem De Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <h2>Ram Tamang</h2>
+                        <p>The food was incredible. Its taste is great. Love the food. Wanna try more from Kantipur Restaurant.</p>                    
                     </div>
 
                     <div>
                         <div class="img"><img src="]=https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Ms. Lorem R. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <h2>Nisha Maharjan</h2>
+                        <p>Glad, I ordered from Kantipur Restaurant. The service was very fast. I am impressed.</p>                    
                     </div>
 
                 </div>
