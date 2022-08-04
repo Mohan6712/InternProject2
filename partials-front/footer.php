@@ -58,7 +58,7 @@
                 <textarea rows="2" name="message" cols="25" required placeholder="Feedback *"></textarea>
               </div>
               <div class="btn">
-                <button type="submit">Send</button>
+                <button>Send</button>
               </div>
             </form>
           </div>

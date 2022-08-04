@@ -1,21 +1,21 @@
 <?php
+include('./config/constants.php');
 
-//CHeck whether the Submit Button is Clicked or NOt
-if(isset($_POST['submit'])){
   $email = $_POST['email'];
 	$message = $_POST['message'];
+
+  echo $message;
 
     $sql = "INSERT INTO tbl_feedbacks (email, message)
         VALUES ('$email', '$message')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
-        header('Location: index.php');
+        header('Location:'.SITEURL);
       $email = "";
       $message = "";
     
     } else {
-       header('Location: index.php');
+       header('Location:'.SITEURL);
     }
-}
-	//Process for Login
+    header('Location:'.SITEURL);
 ?>

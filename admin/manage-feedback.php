@@ -18,7 +18,6 @@
                 <table class="tbl-full">
                     <tr>
                         <th width="20%">#</th>
-                        <th width="20%">Feedback Date</th>
                         <th width="20%">Email</th>
                         <th width="30%">Message</th>
                         <th>Actions</th>
@@ -26,7 +25,7 @@
 
                     <?php 
                         //Get all the orders from database
-                        $sql = "SELECT * FROM tbl_order ORDER BY id DESC"; // DIsplay the Latest Order at First
+                        $sql = "SELECT * FROM tbl_feedbacks ORDER BY id DESC"; // DIsplay the Latest Order at First
                         //Execute Query
                         $res = mysqli_query($conn, $sql);
                         //Count the Rows
@@ -41,26 +40,18 @@
                             {
                                 //Get all the order details
                                 $id = $row['id'];
-                                $food = $row['food'];
-                                $price = $row['price'];
-                                $qty = $row['qty'];
-                                $total = $row['total'];
-                                $order_date = $row['order_date'];
-                                $status = $row['status'];
-                                $customer_name = $row['customer_name'];
-                                $customer_contact = $row['customer_contact'];
-                                $customer_email = $row['customer_email'];
-                                $customer_address = $row['customer_address'];
+                                $email = $row['email'];
+                                $message = $row['message'];
+                              
                                 
                                 ?>
 
                                     <tr>
                                         <td><?php echo $sn++; ?> </td>
-                                        <td><?php echo $order_date; ?></td>
-                                        <td><?php echo $food; ?></td>
-                                        <td><?php echo $food; ?></td>
+                                        <td><?php echo $email; ?></td>
+                                        <td><?php echo $message; ?></td>
                                         <td>
-                                            <a href="<?php echo ADMIN_URI; ?>admin/update-order.php?id=<?php echo $id; ?>" class="btn-secondary">Update Order</a>
+                                            <a href="<?php echo ADMIN_URI; ?>admin/update-order.php?id=<?php echo $id; ?>" class="btn-secondary">Delete Feedback</a>
                                         </td>
                                     </tr>
 
