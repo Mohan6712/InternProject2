@@ -3,7 +3,7 @@
 $server = "localhost";
 $user = "root";
 $pass = "";
-$database = "login";
+$database = "onlinefoodorder";
 
 $conn = mysqli_connect($server, $user, $pass, $database);
 

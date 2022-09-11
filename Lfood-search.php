@@ -1,14 +1,18 @@
 
-    <?php include('partials-front/menu.php'); ?>
+    <?php include('partials-front/menuafterlogin.php'); ?>
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
+            <?php 
+
+                //Get the Search Keyword
+                $search = $_POST['search'];
             
-            <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
-                <input type="search" name="search" placeholder="Search for Food.." required>
-                <input type="submit" name="submit" value="Search" class="btn btn-primary">
-            </form>
+            ?>
+
+
+            <h2><a href="#" class="text-white">Foods on Your Search "<?php echo $search; ?>"</a></h2>
 
         </div>
     </section>
@@ -22,33 +26,34 @@
             <h2 class="text-center">Food Menu</h2>
 
             <?php 
-                //Display Foods that are Active
-                $sql = "SELECT * FROM tbl_food WHERE active='Yes'";
+
+                //SQL Query to Get foods based on search keyword
+                $sql = "SELECT * FROM tbl_food WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
 
                 //Execute the Query
-                $res=mysqli_query($conn, $sql);
+                $res = mysqli_query($conn, $sql);
 
                 //Count Rows
                 $count = mysqli_num_rows($res);
 
-                //CHeck whether the foods are availalable or not
+                //Check whether food available of not
                 if($count>0)
                 {
-                    //Foods Available
+                    //Food Available
                     while($row=mysqli_fetch_assoc($res))
                     {
-                        //Get the Values
+                        //Get the details
                         $id = $row['id'];
                         $title = $row['title'];
-                        $description = $row['description'];
                         $price = $row['price'];
+                        $description = $row['description'];
                         $image_name = $row['image_name'];
                         ?>
-                        
+
                         <div class="food-menu-box">
                             <div class="food-menu-img">
                                 <?php 
-                                    //CHeck whether image available or not
+                                    // Check whether image name is available or not
                                     if($image_name=="")
                                     {
                                         //Image not Available
@@ -59,7 +64,8 @@
                                         //Image Available
                                         ?>
                                         <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
-                                        <?php
+                                        <?php 
+
                                     }
                                 ?>
                                 
@@ -67,13 +73,13 @@
 
                             <div class="food-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="food-price">Rs <?php echo $price; ?></p>
+                                <p class="food-price">$<?php echo $price; ?></p>
                                 <p class="food-detail">
                                     <?php echo $description; ?>
                                 </p>
                                 <br>
 
-                                <a href="<?php echo SITEURL; ?>logins.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
+                                <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
                             </div>
                         </div>
 
@@ -82,12 +88,11 @@
                 }
                 else
                 {
-                    //Food not Available
+                    //Food Not Available
                     echo "<div class='error'>Food not found.</div>";
                 }
-            ?>
-
             
+            ?>
 
             
 

@@ -1,5 +1,5 @@
 
-<?php include('partials-front/menu.php'); ?>
+<?php include('partials-front/menuafterlogin.php'); ?>
 
     <?php 
         //CHeck whether food id is set or not
@@ -74,7 +74,7 @@
                         <h3><?php echo $title; ?></h3>
                         <input type="hidden" name="food" value="<?php echo $title; ?>">
 
-                        <p class="food-price">$<?php echo $price; ?></p>
+                        <p class="food-price">Rs<?php echo $price; ?></p>
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
 
                         <div class="order-label">Quantity</div>
@@ -99,6 +99,9 @@
                     <textarea name="address" rows="10" placeholder="E.g. Street, City" class="input-responsive" required></textarea>
 
                     <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
+                    <a href="hi.php">
+                    <input type="button"  value="Cancel Order" class="btn btn-primary">
+                        </a>
                 </fieldset>
 
             </form>
@@ -168,4 +171,4 @@
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('partials-front/footerafterlogin.php'); ?>

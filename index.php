@@ -173,7 +173,7 @@
 
 
         <p class="text-center">
-            <a href="#">See All Foods</a>
+            <a href="foods.php">See All Foods</a>
         </p>
     </section>
 
@@ -194,32 +194,32 @@
                 <div id="testim-content" class="cont">
                     
                     <div class="active">
-                        <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
+                        <div class="img"><img src="images/su.jpg" alt="sud"></div>
                         <h2>Sudarshan Rai</h2>
                         <p>Awesome Food. Food from some of the finest restaurants in Nepal!</p>                    
                     </div>
 
                     <div>
-                        <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Susant Khadka</h2>
+                        <div class="img"><img src="images/pra.jpg" alt=""></div>
+                        <h2>Prakash Sunuwar</h2>
                         <p>Good Recipes, Nice staff and customer care. A good and quick service. I would be regular customer.</p>                    
                     </div>
 
                     <div>
-                        <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Meena Shrestha</h2>
+                        <div class="img"><img src="images/aayush.jpg" alt=""></div>
+                        <h2>Aayush Suryabansi</h2>
                         <p>Excellent Food & in-time delivery of food.</p>                    
                     </div>
 
                     <div>
-                        <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Ram Tamang</h2>
+                        <div class="img"><img src="images/johnson.jpg" alt=""></div>
+                        <h2>Johnson Tamang</h2>
                         <p>The food was incredible. Its taste is great. Love the food. Wanna try more from Kantipur Restaurant.</p>                    
                     </div>
 
                     <div>
-                        <div class="img"><img src="]=https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
-                        <h2>Nisha Maharjan</h2>
+                        <div class="img"><img src="https://i.picsum.photos/id/883/200/300.jpg?hmac=L62LMsIBfvhnxlTirzshbyv6HarwJvd-tSSBcIvbCVw" alt=""></div>
+                        <h2>Pawan Silwal </h2>
                         <p>Glad, I ordered from Kantipur Restaurant. The service was very fast. I am impressed.</p>                    
                     </div>
 

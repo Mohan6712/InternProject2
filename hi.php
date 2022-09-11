@@ -4,7 +4,7 @@
     <section class="food-search text-center">
         <div class="container">
             
-            <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
+            <form action="<?php echo SITEURL; ?>Lfood-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search Foods" required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
@@ -45,7 +45,7 @@
                         $image_name = $row['image_name'];
                         ?>
                         
-                        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
+                        <a href="<?php echo SITEURL; ?>Lcategory-foods.php?category_id=<?php echo $id; ?>">
                             <div class="box-3 float-container">
                                 <?php 
                                     //Check whether Image is available or not
@@ -139,7 +139,7 @@
 
                         <div class="food-menu-desc">
                             <h4><?php echo $title; ?></h4>
-                            <p class="food-price">$<?php echo $price; ?></p>
+                            <p class="food-price">Rs<?php echo $price; ?></p>
                             <p class="food-detail">
                                 <?php echo $description; ?>
                             </p>
@@ -171,10 +171,9 @@
         </div>
 
         <p class="text-center">
-            <a href="#">See All Foods</a>
         </p>
     </section>
     <!-- fOOD Menu Section Ends Here -->
 
     
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('partials-front/footerafterlogin.php'); ?>

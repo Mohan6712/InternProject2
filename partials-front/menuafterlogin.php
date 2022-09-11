@@ -21,19 +21,17 @@
                 <img src="images/logo.png" alt="RestaurantLogo" class="img-responsive">
                  <h2>Kantipur Restaurant</h2>
                 </a>
-                <p>Best in the town.</p>
             </div>
-
             <div class="menu text-right">
                 <ul>
                     <li>
-                        <a href="<?php echo SITEURL; ?>">Home</a>
+                        <a href="<?php echo SITEURL; ?>hi.php">Home</a>
                     </li>
                     <li>
-                        <a href="<?php echo SITEURL; ?>categories.php">Categories</a>
+                        <a href="<?php echo SITEURL; ?>Lcategories.php">Categories</a>
                     </li>
                     <li>
-                        <a href="<?php echo SITEURL; ?>foods.php">Foods</a>
+                        <a href="<?php echo SITEURL; ?>Lfoods.php">Foods</a>
                     </li>
                     <li>
                         <a href="<?php echo SITEURL; ?>logout.php">Logout</a>

@@ -16,6 +16,7 @@
                 <br><br>
 
                 <table class="tbl-full">
+                    <tbody class="move">
                     <tr>
                         <th width="5%">#</th>
                         <th width="10%">Order Date</th>
@@ -113,7 +114,7 @@
                         }
                     ?>
 
- 
+                    </tbody>
                 </table>
     </div>
     

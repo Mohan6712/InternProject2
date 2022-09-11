@@ -1,33 +1,33 @@
 <?php 
 
- include('login/config.php');
+// include('login/config.php');
 
 session_start();
 
 error_reporting(0);
 
-if (isset($_SESSION['username'])) {
-    header("Location: hi.php");
-}
+// if (isset($_SESSION['username'])) {
+//     header("Location: hi.php");
+// }
 
-if (isset($_POST['submit'])) {
-	$username = $_POST['username'];
-	$password = md5($_POST['password']);
+// if (isset($_POST['submit'])) {
+// 	$username = $_POST['username'];
+// 	$password = md5($_POST['password']);
 
-	$sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-	$result = mysqli_query($conn, $sql);
-	if ($result->num_rows > 0) {
-		$row = mysqli_fetch_assoc($result);
-		$_SESSION['username'] = $row['username'];
-		header("Location: hi.php");
-	} else {
-		echo "<script>alert('Woops! Username or Password is Wrong.')</script>";
-	}
-}
+// 	$sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+// 	$result = mysqli_query($conn, $sql);
+// 	if ($result->num_rows > 0) {
+// 		$row = mysqli_fetch_assoc($result);
+// 		$_SESSION['username'] = $row['username'];
+// 		header("Location: hi.php");
+// 	} else {
+// 		echo "<script>alert('Woops! Username or Password is Wrong.')</script>";
+// 	}
+// }
 
 ?>
 <?php 
-
+include('config/constants.php');
 //CHeck whether the Submit Button is Clicked or NOt
 if(isset($_POST['submit']))
 {
@@ -54,12 +54,16 @@ if(isset($_POST['submit']))
 		//REdirect to HOme Page/Dashboard
 		header('location:'.SITEURL.'admin/');
 	}
+	$sql1= "SELECT * FROM users WHERE username='$username' AND password='$password'";
+	$result = mysqli_query($conn, $sql1);
+	if ($result->num_rows > 0) {
+		$row = mysqli_fetch_assoc($result);
+		$_SESSION['username'] = $row['username'];
+		header("Location: hi.php");
+	}
 	else
 	{
-		//User not Available and Login FAil
-		$_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
-		//REdirect to HOme Page/Dashboard
-		header('location:'.SITEURL.'admin/login.php');
+		echo "<script>alert('Woops! Username or Password is Wrong.')</script>";
 	}
 
 

@@ -6,7 +6,7 @@ include('partials/menu.php');
 $server = "localhost";
 $user = "root";
 $pass = "";
-$database = "login";
+$database = "onlinefoodorder";
 
 $DB = mysqli_connect($server, $user, $pass, $database);
 

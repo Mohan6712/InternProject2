@@ -1,14 +1,37 @@
+    
+    <?php include('partials-front/menuafterlogin.php'); ?>
 
-    <?php include('partials-front/menu.php'); ?>
+    <?php 
+        //CHeck whether id is passed or not
+        if(isset($_GET['category_id']))
+        {
+            //Category id is set and get the id
+            $category_id = $_GET['category_id'];
+            // Get the CAtegory Title Based on Category ID
+            $sql = "SELECT title FROM tbl_category WHERE id=$category_id";
+
+            //Execute the Query
+            $res = mysqli_query($conn, $sql);
+
+            //Get the value from Database
+            $row = mysqli_fetch_assoc($res);
+            //Get the TItle
+            $category_title = $row['title'];
+        }
+        else
+        {
+            //CAtegory not passed
+            //Redirect to Home page
+            header('location:'.SITEURL);
+        }
+    ?>
+
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
             
-            <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
-                <input type="search" name="search" placeholder="Search for Food.." required>
-                <input type="submit" name="submit" value="Search" class="btn btn-primary">
-            </form>
+            <h2><a href="#" class="text-white">Foods on "<?php echo $category_title; ?>"</a></h2>
 
         </div>
     </section>
@@ -22,33 +45,32 @@
             <h2 class="text-center">Food Menu</h2>
 
             <?php 
-                //Display Foods that are Active
-                $sql = "SELECT * FROM tbl_food WHERE active='Yes'";
+            
+                //Create SQL Query to Get foods based on Selected CAtegory
+                $sql2 = "SELECT * FROM tbl_food WHERE category_id=$category_id";
 
                 //Execute the Query
-                $res=mysqli_query($conn, $sql);
+                $res2 = mysqli_query($conn, $sql2);
 
-                //Count Rows
-                $count = mysqli_num_rows($res);
+                //Count the Rows
+                $count2 = mysqli_num_rows($res2);
 
-                //CHeck whether the foods are availalable or not
-                if($count>0)
+                //CHeck whether food is available or not
+                if($count2>0)
                 {
-                    //Foods Available
-                    while($row=mysqli_fetch_assoc($res))
+                    //Food is Available
+                    while($row2=mysqli_fetch_assoc($res2))
                     {
-                        //Get the Values
-                        $id = $row['id'];
-                        $title = $row['title'];
-                        $description = $row['description'];
-                        $price = $row['price'];
-                        $image_name = $row['image_name'];
+                        $id = $row2['id'];
+                        $title = $row2['title'];
+                        $price = $row2['price'];
+                        $description = $row2['description'];
+                        $image_name = $row2['image_name'];
                         ?>
                         
                         <div class="food-menu-box">
                             <div class="food-menu-img">
                                 <?php 
-                                    //CHeck whether image available or not
                                     if($image_name=="")
                                     {
                                         //Image not Available
@@ -82,12 +104,11 @@
                 }
                 else
                 {
-                    //Food not Available
-                    echo "<div class='error'>Food not found.</div>";
+                    //Food not available
+                    echo "<div class='error'>Food not Available.</div>";
                 }
-            ?>
-
             
+            ?>
 
             
 

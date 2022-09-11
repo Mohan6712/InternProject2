@@ -17,9 +17,9 @@
 
                 <table class="tbl-full">
                     <tr>
-                        <th width="20%">#</th>
-                        <th width="20%">Email</th>
-                        <th width="30%">Message</th>
+                        <th width="10%">Sn</th>
+                        <th width="30%">Email</th>
+                        <th width="40%">Message</th>
                         <th>Actions</th>
                     </tr>
 
@@ -51,7 +51,7 @@
                                         <td><?php echo $email; ?></td>
                                         <td><?php echo $message; ?></td>
                                         <td>
-                                            <a href="<?php echo ADMIN_URI; ?>admin/update-order.php?id=<?php echo $id; ?>" class="btn-secondary">Delete Feedback</a>
+                                            <a href="<?php echo ADMIN_URI; ?>admin/delete-feedback.php?id=<?php echo $id; ?>" class="btn-secondary">Delete Feedback</a>
                                         </td>
                                     </tr>
 
