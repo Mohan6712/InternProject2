@@ -171,26 +171,28 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `verificationCode` int(11) NOT NULL,
+  `isVerified` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(8, 'Mohan67', 'mohan6@gmail.com', '0139a3c5cf42394be982e766c93f5ed0'),
-(9, 'Aayush75', 'aayush456@gmail.com', '6be36e8c3903896517ec85c69adf018d'),
-(10, 'Alisha78', 'alisha56@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b'),
-(11, 'Ram67', 'ram4@gmail.com', 'a93403feeecee860206733265ea8bc47'),
-(12, 'hari5', 'hari5@gmail.com', '0769e56eb5d72039f01530d705e971da'),
-(13, 'bresh', 'bresh56@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(14, 'Mohan67', 'ram3@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(15, 'Prakash55', 'prakash67@gmail.com', '117cbfb66c043f5ee35a5501fc3878e7'),
-(16, 'Sunil33', 'Sunil45@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
-(17, 'Sushil11', 'sushil11@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
-(18, 'hari', 'ram@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(20, 'Dawa22', 'dawa34@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
+INSERT INTO `users` (`id`, `username`, `email`, `password`,`verificationCode`,`isVerified`) VALUES
+(8, 'Mohan67', 'mohan6@gmail.com', '0139a3c5cf42394be982e766c93f5ed0',0,'YES'),
+(9, 'Aayush75', 'aayush456@gmail.com', '6be36e8c3903896517ec85c69adf018d',0,'YES'),
+(10, 'Alisha78', 'alisha56@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b',0,'YES'),
+(11, 'Ram67', 'ram4@gmail.com', 'a93403feeecee860206733265ea8bc47',0,'YES'),
+(12, 'hari5', 'hari5@gmail.com', '0769e56eb5d72039f01530d705e971da',0,'YES'),
+(13, 'bresh', 'bresh56@gmail.com', '202cb962ac59075b964b07152d234b70',0,'YES'),
+(14, 'Mohan67', 'ram3@gmail.com', '202cb962ac59075b964b07152d234b70',0,'YES'),
+(15, 'Prakash55', 'prakash67@gmail.com', '117cbfb66c043f5ee35a5501fc3878e7',0,'YES'),
+(16, 'Sunil33', 'Sunil45@gmail.com', 'e10adc3949ba59abbe56e057f20f883e',0,'YES'),
+(17, 'Sushil11', 'sushil11@gmail.com', 'e10adc3949ba59abbe56e057f20f883e',0,'YES'),
+(18, 'hari', 'ram@gmail.com', '202cb962ac59075b964b07152d234b70',0,'YES'),
+(20, 'Dawa22', 'dawa34@gmail.com', 'e10adc3949ba59abbe56e057f20f883e',0,'YES');
 
 --
 -- Indexes for dumped tables

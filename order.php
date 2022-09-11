@@ -1,4 +1,7 @@
 
+
+
+
 <?php include('partials-front/menuafterlogin.php'); ?>
 
     <?php 
@@ -37,6 +40,27 @@
             //Redirect to homepage
             header('location:'.SITEURL);
         }
+
+        function getEmail(){
+            if(!isset($_COOKIE['user'])) {
+              } else {
+                                
+$conn = mysqli_connect('localhost', 'root', '') or die(mysqli_error());
+$db_select = mysqli_select_db($conn, 'onlinefoodorder') or die(mysqli_error()); //SElecting Database
+                $getUser = "SELECT  email FROM users WHERE username='" . $_COOKIE['user'] . "'";
+                //Execute the Query
+                $getUserQuery = mysqli_query($conn, $getUser);
+
+                //Count Rows
+                $count = mysqli_num_rows($getUserQuery);
+
+                if ($count > 0) {
+                    while ($row = mysqli_fetch_assoc($getUserQuery)) {
+                        $email = (string) $row['email'] ;
+                        return  $email;
+              }
+            }
+        }}
     ?>
 
     <!-- fOOD sEARCH Section Starts Here -->
@@ -93,7 +117,7 @@
                     <input type="tel" name="contact" placeholder="E.g. 9810397122" class="input-responsive" required>
 
                     <div class="order-label">Email</div>
-                    <input type="email" name="email" placeholder="E.g. mohan78@gmail.com" class="input-responsive" required>
+                    <input type="email" name="email" value="<?php echo getEmail() ?>" placeholder="E.g. mohan78@gmail.com" class="input-responsive" required>
 
                     <div class="order-label">Address</div>
                     <textarea name="address" rows="10" placeholder="E.g. Street, City" class="input-responsive" required></textarea>

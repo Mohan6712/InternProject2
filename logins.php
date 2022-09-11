@@ -47,7 +47,8 @@ if(isset($_POST['submit']))
 
 	if($count==1)
 	{
-		//User AVailable and Login Success
+		$cookie_name = "user";
+		setcookie($cookie_name, $username, time() + (86400 * 30), "/");
 		$_SESSION['login'] = "<div class='success'>Login Successful.</div>";
 		$_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
 
@@ -57,6 +58,8 @@ if(isset($_POST['submit']))
 	$sql1= "SELECT * FROM users WHERE username='$username' AND password='$password'";
 	$result = mysqli_query($conn, $sql1);
 	if ($result->num_rows > 0) {
+		$cookie_name = "user";
+		setcookie($cookie_name, $username, time() + (86400 * 30), "/");
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
 		header("Location: hi.php");

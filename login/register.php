@@ -1,10 +1,11 @@
 <?php 
 
 include 'config.php';
+include '../config/constants.php';
+include '../mailer.php';
 
 error_reporting(0);
 
-session_start();
 
 if (isset($_SESSION['username'])) {
     header("Location: index.php");
@@ -15,16 +16,20 @@ if (isset($_POST['submit'])) {
 	$email = $_POST['email'];
 	$password = md5($_POST['password']);
 	$cpassword = md5($_POST['cpassword']);
+	$verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
+
 
 	if ($password == $cpassword) {
 		$sql = "SELECT * FROM users WHERE email='$email'";
 		$result = mysqli_query($conn, $sql);
 		if (!$result->num_rows > 0) {
-			$sql = "INSERT INTO users (username, email, password)
-					VALUES ('$username', '$email', '$password')";
+			$sql = "INSERT INTO users (username, email, password, verificationCode,isVerified)
+					VALUES ('$username', '$email', '$password', '$verification_code', 'NO')";
 			$result = mysqli_query($conn, $sql);
 			if ($result) {
-				echo "<script>alert('Wow! User Registration Completed.')</script>";
+				sendMail($email,$username, $verification_code);
+				echo "<script>alert('Registration success')</script>";
+				Header("Location:".$admin_dir_path.'email-verification.php?email='.$email);
 				$username = "";
 				$email = "";
 				$_POST['password'] = "";
