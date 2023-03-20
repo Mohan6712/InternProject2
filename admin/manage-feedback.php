@@ -7,11 +7,12 @@
                 <br /><br /><br />
 
                 <?php 
-                    if(isset($_SESSION['update']))
+                    if(isset($_SESSION['delete']))
                     {
-                        echo $_SESSION['update'];
-                        unset($_SESSION['update']);
+                        echo $_SESSION['delete'];
+                        unset($_SESSION['delete']);
                     }
+
                 ?>
                 <br><br>
 
@@ -51,7 +52,7 @@
                                         <td><?php echo $email; ?></td>
                                         <td><?php echo $message; ?></td>
                                         <td>
-                                            <a href="<?php echo ADMIN_URI; ?>admin/delete-feedback.php?id=<?php echo $id; ?>" class="btn-secondary">Delete Feedback</a>
+                                            <a href="<?php echo ADMIN_URI; ?>admin/delete-feedback.php?id=<?php echo $id; ?>" class="btn-danger">Delete Feedback</a>
                                         </td>
                                     </tr>
 

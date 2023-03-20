@@ -27,6 +27,11 @@ if (!$conn) {
                         echo $_SESSION['update'];
                         unset($_SESSION['update']);
                     }
+                    if(isset($_SESSION['delete']))
+                    {
+                        echo $_SESSION['delete'];
+                        unset($_SESSION['delete']);
+                    }
                 ?>
                 <br><br>
 
@@ -35,6 +40,7 @@ if (!$conn) {
                         <th width="20%">#</th>
                         <th width="20%">Email</th>
                         <th width="30%">Username</th>
+                        
                     </tr>
 
                     <?php 
@@ -64,17 +70,18 @@ if (!$conn) {
                                         <td><?php echo $sn++; ?> </td>
                                         <td><?php echo $email; ?></td>
                                         <td><?php echo $username; ?></td>
-                                       
-                                    </tr>
 
+
+                                    </tr>
+                                   
                                 <?php
 
                             }
                         }
                         else
                         {
-                            //Order not Available
-                            echo "<tr><td colspan='12' class='error'>Orders not Available</td></tr>";
+                            
+                            echo "<tr><td colspan='12' class='error'>Customer not Available</td></tr>";
                         }
                     ?>
 

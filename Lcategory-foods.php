@@ -121,4 +121,4 @@
     </section>
     <!-- fOOD Menu Section Ends Here -->
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('partials-front/footerafterlogin.php'); ?>

@@ -178,13 +178,14 @@ $db_select = mysqli_select_db($conn, 'onlinefoodorder') or die(mysqli_error()); 
                     {
                         //Query Executed and Order Saved
                         $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully.</div>";
-                        header('location:'.SITEURL);
+                        header('location:'.SITEURL.'/hi.php');
+                       
                     }
                     else
                     {
                         //Failed to Save Order
                         $_SESSION['order'] = "<div class='error text-center'>Failed to Order Food.</div>";
-                        header('location:'.SITEURL);
+                        header('location:'.SITEURL.'/hi.php');
                     }
 
                 }

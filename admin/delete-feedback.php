@@ -27,7 +27,7 @@
         //Failed to Delete Admin
         //echo "Failed to Delete Admin";
 
-        $_SESSION['delete'] = "<div class='error'>Failed to Delete Admin. Try Again Later.</div>";
+        $_SESSION['delete'] = "<div class='error'>Failed to Delete Feedback. Try Again Later.</div>";
         header('location:'.ADMIN_URI.'admin/manage-feedback.php');
     }
 

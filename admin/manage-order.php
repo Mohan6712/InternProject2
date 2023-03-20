@@ -12,6 +12,12 @@
                         echo $_SESSION['update'];
                         unset($_SESSION['update']);
                     }
+                    if(isset($_SESSION['delete']))
+                    {
+                        echo $_SESSION['delete'];
+                        unset($_SESSION['delete']);
+                    }
+
                 ?>
                 <br><br>
 
@@ -100,6 +106,9 @@
                                         <td><?php echo $customer_address; ?></td>
                                         <td>
                                             <a href="<?php echo ADMIN_URI; ?>admin/update-order.php?id=<?php echo $id; ?>" class="btn-secondary">Update Order</a>
+                                        
+                                            <br/><br/>
+                                            <a href="<?php echo ADMIN_URI; ?>admin/deleteorder.php?id=<?php echo $id; ?>" class="btn-danger">Delete Order</a>
                                         </td>
                                     </tr>
 
